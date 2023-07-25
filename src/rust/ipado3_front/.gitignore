@@ -1,0 +1,8 @@
+node_modules
+/dist/js
+/target
+/wasm-pack.log
+/yarn-error.log
+/pkg
+!client_secret_*.json
+/heats

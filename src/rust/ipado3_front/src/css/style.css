@@ -1,0 +1,280 @@
+body {
+  font: normal 18px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  box-sizing: border-box;
+  margin: 0;
+  --content-margin-top: 170px;
+    --color: black;
+    color: var(--color);
+}
+
+.background, header {
+  top: 0;
+  width: 100%;
+  position: fixed;
+  background-image: var(--background-image-url);
+  background-size: calc(max(100vw, 100vh));
+  background-position: top 0 left 50%;
+}
+
+.background {
+  height: 100vh;
+  z-index: -1;
+}
+
+.heats .item {
+    max-width: 190px;
+}
+.heats .item table th,.heats .item table td {
+    text-align: center;
+}
+.heats .item table th {
+    border-bottom: 1px solid var(--color);
+}
+.heats .item table.mixed {
+    /* font-size: 16px; */
+    font-size: smaller;
+}
+.heats .item table.mixed th:first-of-type, 
+.heats .item table.mixed td:first-of-type
+{
+    border-right: 1px solid var(--color);
+    padding-right: 0.5rem;
+}
+
+.heats .item table.mixed {
+    border-collapse: collapse;
+}
+.heats .item table.mixed tbody tr:nth-child(even){
+    background-color: rgba(0,0,0,0.3);
+}
+.heats .item table:not(.simple) tbody tr:first-of-type td {
+    padding-top: 0.5rem;
+}
+.heats .item table.mixed tbody th,
+.heats .item table.mixed tbody td {
+    padding:  .2rem .5rem;
+}
+.heats .item table.mixed tbody tr td:nth-of-type(2) {
+    padding-left: 1rem;
+}
+.heats .item table.mixed tbody tr td:last-of-type  {
+    padding-right: 1rem;
+}
+.heats .item table.mixed {
+    margin: 0 0.5rem;
+}
+
+.heats .item table {
+    border-spacing: .8rem .05rem;
+    border-collapse: separate;
+}
+
+.wrapper {
+    width: 100%;
+    height: calc(100vh - 2 * var(--content-margin-top));
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 240px;
+}
+
+.wrapper > .details > .dance {
+    font-size: 150px;
+}
+
+.wrapper > .details > .dance:before {
+    content: 'Dance: ';
+}
+
+.wrapper .details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper table.simple td {
+    padding: 16px;
+    font-size: 76px;
+}
+
+.wrapper table.non-mixed td {
+    padding: 16px;
+    font-size: 76px;
+    text-align: right;
+}
+
+.wrapper table.non-mixed td:first-of-type {
+    padding-left: 32px;
+}
+
+.wrapper table.non-mixed th {
+    padding: 16px;
+    padding-right: 32px;
+    font-size: 76px;
+    border-right: 1px solid white;
+}
+
+h1 {
+  font: inherit;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-block-start: 16px;
+  /* margin-block-end: 12px; */
+}
+
+/* .public_content  h1 { */
+/*     display: none; */
+/* } */
+
+h1 > div {
+  flex-basis: calc(var(--origin-width) / var(--origin-basis-denominator));
+  flex-grow: 0;
+  flex-shrink: 1;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+h1 > div > div {
+  position: relative;
+  width: 100%;
+  padding-bottom: calc(100% * (var(--origin-height-px) / var(--origin-width-px)));
+  float: left;
+  height: 0;
+  box-sizing: border-box;
+}
+h1 > div > div > div {
+  background-image: var(--origin-url);
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  box-sizing: border-box;
+  /* https://stackoverflow.com/questions/13367868/how-to-modify-the-fill-color-of-an-svg-image-when-being-served-as-background-ima */
+}
+h1 .ear:first-of-type {
+  margin-left: calc(100vw / 30);
+}
+h1 .title {
+  margin: 0 calc(100vw / 15);
+}
+h1 .ear:last-of-type {
+  margin-right: 16px;
+}
+
+.user_content, .public_content {
+  margin-top: 86px;
+  /* margin-top: var(--content-margin-top); */
+  /* margin-bottom: calc(100vh / 2); */
+  /* display: flex; */
+  flex-direction: column;
+  align-items: center;
+}
+
+.public_content {
+    margin-top: var(--content-margin-top);
+}
+
+nav {
+    cursor: pointer;
+    padding: 0.1em 0.2em;
+    border-radius: 4px;
+    min-width: 1.5em;
+}
+nav.right {
+    background-color: lime;
+}
+nav.left {
+    background-color: #F9C284;
+}
+
+table {
+    font-size: 20px;
+    border-collapse: collapse;
+}
+
+table.schedule > caption {
+    font-size: 32px;
+	padding-bottom: 12px;
+}
+
+.public_content table.schedule > caption {
+    display: none;
+}
+
+table.schedule > caption > .inner {
+    display: flex; 
+    justify-content: space-between;
+}
+
+/* table.schedule > caption > .inner >  div.event_hall:before { */
+/*     content: 'Зал: '; */
+/* } */
+
+/* table.schedule.single > caption > .inner >  div.event_hall { */
+/*     display: none; */
+/* } */
+
+table.schedule > caption > .inner > .dances {
+    display: flex;
+    font-size: 20px;
+    align-items: center;
+}
+
+table.schedule > caption > .inner >  .dances > .dance {
+    margin: 0 8px;
+    background-color: var(--selection-color-alive);
+    padding: 8px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+table.schedule > caption > .inner >  .dances > .dance.selected {
+    border: 4px solid darkblue;
+    padding: 6px;
+}
+
+/* table.schedule >  */
+/* isplay: flex; */
+/*     font-size: 20px; */
+
+
+table.schedule > tbody > tr > td {
+    padding-top: 6px;
+    padding-bottom: 6px;
+    vertical-align: top;
+}
+table.schedule > tbody > tr > td:nth-of-type(1) {
+    text-align: right;
+	min-width: 1.8em;
+
+}
+table.schedule > tbody > tr > td:nth-of-type(2) {
+    width: 4em;
+    text-align: center;
+}
+/* table.schedule > tbody > tr > td:nth-of-type(3) { */
+/* 	padding-left: 0.3em; */
+/* 	box-sizing: border-box; */
+/* } */
+
+/* tr.selected, .item.selected  { */
+/*     background-color: var(--selection-color-dead); */
+/* } */
+.selected  {
+    background-color: var(--selection-color-dead);
+}
+
+/* .is_alive tr.selected,  .is_alive .item.selected { */
+/*     background-color: var(--selection-color-alive); */
+/* } */
+.is_alive .selected {
+    background-color: var(--selection-color-alive);
+}
+

@@ -1,0 +1,25 @@
+[package]
+name = "spreadsheets"
+version = "0.3.3"
+# 0.3.3 - implemented get_sheets_props in addition to get_sheet_props; implemented PasteType corresponding to https://developers.google.com/sheets/api/reference/rest/v4/spreadsheets/request#PasteType
+# 0.3.2 - added derive(serde::{Serilize, Deserialize) for struct DataRange
+# 0.3.1 - added derive(Clone) for CompactExtendedValue
+# 0.3.0 - added color.rs; 
+# 0.2.0 - enhanced from_range_data! 
+# 0.1.2 - implemented api::get_rangelar_data
+# 0.1.1 - added macros.rs: spreadsheet_rows!, from_range_data!
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+anyhow = "1"
+log = "0.4"
+yup-oauth2 = "6"
+google-sheets4 = { git = "https://github.com/yurybikuzin/google-sheets4" }
+hyper = "0.14"
+hyper-rustls = { version = "0.23", features = [ "rustls-native-certs" ] }
+chrono = {version = "0.4", features = ["serde"] }
+common_macros2 = { path = "../common_macros2" }
+itertools = "0.11"
+serde = "1"

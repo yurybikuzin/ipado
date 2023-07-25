@@ -1,0 +1,111 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap'); */
+
+body {
+    --color: white;
+    /* color: var(--color); */
+    /* color: black; */
+    /* background-color: navy; */
+    /* --background-image-url: url(assets/2023-07-08/background.jpg); */
+    /* --background-image-url: url(assets/2023-07-08/background.jpeg); */
+    --background-image-url: url(assets/2023-07-08/background.optimized.jpg);
+    /* --selection-color-alive: #F8C471; */
+    /* --selection-color-dead: silver; */
+}
+
+/* header { */
+/*     background-image: url(background.jpg); */
+/* } */
+
+/* header { */
+/*     background-color: #AA00FB; */
+/* } */
+
+h1 .title {
+    --origin-url: url(assets/2023-07-08/logo_center.optimized.png);
+    --origin-width: 340px;
+    --origin-width-px: 340;
+    --origin-height-px: 130;
+    /* --origin-width: 425px; */
+    /* --origin-width-px: 425; */
+    /* --origin-height-px: 128; */
+    /* --origin-width: 370px; */
+    /* --origin-width-px: 370; */
+    /* --origin-height-px: 150; */
+    --origin-basis-denominator: 1;
+}
+
+/* h1 .ear:first-of-type { */
+/*     --origin-url: url(assets/2023-07-08/logo_left.optimized.png); */
+/*     --origin-width: 130px; */
+/*     --origin-width-px: 130; */
+/*     --origin-height-px: 130; */
+/*     --origin-basis-denominator: 1; */
+/* } */
+
+h1 .ear:first-of-type {
+    --origin-url: url(assets/2023-07-08/logo_right.optimized.png);
+    --origin-width: 200px;
+    --origin-width-px: 200;
+    --origin-height-px: 50;
+    --origin-basis-denominator: 1;
+}
+
+
+/* h1 .title > div { */
+/*     padding-bottom: 85px; */
+/* } */
+/* h1 .title div { */
+/*     height: 70px !important; */
+/* } */
+/*  */
+/* h1 .title div div::after { */
+/*     content: 'Кубок Форум Данс'; */
+/*     white-space: nowrap; */
+/*     font-size: 350%; */
+/*     font-family: 'Lobster'; */
+/*     color: #ff001f; */
+/* } */
+/*  */
+/* @media screen  */
+/* and (max-width: 1023px)  */
+/* { */
+/*     h1 .ear:last-of-type { */
+/*         --origin-width: 104px; */
+/*         --origin-width-px: 104; */
+/*         --origin-url: url(assets/2023-07-08/logo_right.optimized.png); */
+/*         --origin-height-px: 104; */
+/*         --origin-basis-denominator: 1; */
+/*     } */
+/*     h1 .ear:last-of-type > div > div > div.clock { */
+/*         display: none !important; */
+/*     } */
+/* } */
+
+
+
+/* h1 .ear:last-of-type { */
+/*     --origin-width: 200px; */
+/*     --origin-width-px: 200; */
+/*     /* --origin-url: url(assets/2023-07-08/logo_right.optimized.png); */ */
+/*     --origin-height-px: 63; */
+/*     --origin-basis-denominator: 1; */
+/* } */
+
+/* h1 .ear:last-of-type > div { */
+/*     /* height: auto; */ */
+/*     /* width: auto; */ */
+/*     display: flex; */
+/*     justify-content: center; */
+/*     align-items: center; */
+/* } */
+/*  */
+/* h1 .ear:last-of-type > div > div { */
+/*     height: auto; */
+/*     width: auto; */
+/* } */
+
+/* h1 .ear:last-of-type > div > div:after { */
+/*     content: '20:04'; */
+/* } */
+
+

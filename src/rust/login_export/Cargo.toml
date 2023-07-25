@@ -1,0 +1,14 @@
+[package]
+name = "login_export"
+version = "0.2.2"
+# 0.2.2 - added #[serde(rename_all = "camelCase")] to AuthContact
+# 0.2.1 - LoginPayload moved here
+# 0.2.0 - Acl::get_roles_for, AclRole
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+serde = { version = "1", features = ["derive"] }
+common_macros2 = { path = "../common_macros2" }
+op_mode = { path = "../op_mode" }

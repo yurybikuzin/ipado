@@ -1,0 +1,107 @@
+[package]
+name = "ipado3_front"
+version = "0.22.4"
+# 0.22.4 - udeps.sh applied
+# 0.22.3 - mixed case ("Битые" заходы) IS supported by /#/heat
+# 0.22.2 - improved /#/heat: added details for following cases: simple, non-mixed; mixed case ("Битые" заходы) is not supported yet by /#/heat
+# 0.22.1 - added /#/heat
+# 0.22.0 - added support for битые заходы
+# 0.21.4 - mobile restored
+# 0.21.3 - поддержка .heats
+# 0.21.2 - restored public_content; implemented heats
+# 0.21.1 - restored /admin
+# 0.21.0 - introduced ipado3
+# 0.20.2 - автоматический скролл курсора в область видимости в админке
+# 0.20.1 - автоматический скролл курсора в область видимости в пользователькой части
+# 0.20.0 - removed support for couples
+# 0.19.3 - auto scroll cursor into view after app start
+# 0.19.2 - adopted to unordered schedule_item.num (113 may follow 116 and be followed by 117)
+# 0.19.1 - adopted to mobile
+# 0.19.0 - fixed issue with cursor missing after refresh, also fixed issue with cursor saving in db
+# 0.18.0 - extended InitData
+# 0.17.1 - obtained clock from 0.15.4 (branch ipado_15)
+# 0.17.0 - ipado2 introduced
+# 0.16.0 - import from Лист2
+# 0.15.3 - restored previous data structure
+# 0.15.2 - adopted to loader
+# 0.15.1 - restored admin UI
+# 0.15.0 - Refresh implemented as part of NeedInitData
+# 0.14.1 - разместил на dance-list.ru, отказался от style.scss
+# 0.14.0 - restored nice ui
+# 0.13.0 - adopted to short schedule, z9v.ru/login
+# 0.12.0 - ipado2_front: adopted to op_mode 0.2.0
+# 0.11.0 - ipado2_back:  returned route /ws
+# 0.10.0 - adjusted to back
+# 0.9.0 - prepare to dance-list.ru
+# 0.8.1 - после восстановления WS-соединения заново запрашивается все расписание: цель - передать на серверинформацию о текущем турнире
+# 0.8.0 - resend user.email to get user.id after ws reconnected
+# 0.7.0 - Google / Yandex Auth 
+# 0.6.1 - added timeout inside cursor_to_visible
+# 0.6.0 - init from via proxy
+# 0.5.0 - CheckAlive impelemented
+# 0.4.0 - MasterSlave Mode for cursor via WebSocket is implemented
+# 0.3.0 - WebSocket in progress
+# 0.2.0 - restored functionality of red-white-cup.html
+# 0.1.0 - first implementation
+description = "ipado3_front"
+authors = ["Yury Bikuzin <yury.bikuzin@gmail.com>"]
+categories = ["wasm"]
+readme = "README.md"
+license = "MIT"
+edition = "2018"
+
+# https://docs.rs/built/0.5.1/built/index.html
+build = "build.rs"
+
+[build-dependencies]
+built = "0.6"
+
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+console_error_panic_hook = "0.1"
+dominator = "0.5"
+wasm-bindgen = { version = "0.2", features = ["serde-serialize"] }
+wasm-bindgen-futures = "0.4"
+futures-signals = "0.3"
+gloo-timers = { version = "0.2", features = ["futures"] }
+js-sys = "0.3"
+once_cell = "1.7"
+serde_json = "1"
+serde_derive = "1"
+serde = "1"
+ipado3_common = { path = "../ipado3_common" }
+chrono = "0.4"
+chrono-tz = "0.8"
+lazy_static = "1"
+bincode = "1"
+op_mode = { path = "../op_mode" }
+web_sys_utils = { path = "../web_sys_utils" }
+semver = "1"
+regex = "1"
+login_export = { path = "../login_export" }
+strum = { version = "0.25", features = ["derive"] }
+common_macros2 = { path = "../common_macros2" }
+
+[dependencies.web-sys]
+version = "0.3"
+features = [
+    "Headers",
+    "Response",
+    "RequestInit",
+    "Window",
+    "Storage",
+    "WebSocket",
+    "BinaryType",
+    "ErrorEvent",
+    "MessageEvent",
+    "Url",
+    "HtmlSelectElement",
+    "Element", 
+	"ScrollToOptions",
+	"ScrollBehavior",
+	"HtmlElement",
+    "NamedNodeMap", 
+]

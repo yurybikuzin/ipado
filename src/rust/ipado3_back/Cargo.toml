@@ -1,0 +1,83 @@
+[package]
+name = "ipado3_back"
+version = "0.22.4"
+# 0.22.4 - udeps.sh applied
+# 0.22.3 - mixed case ("Битые" заходы) IS supported by /#/heat
+# 0.22.0 - added support for битые заходы
+# 0.21.3 - restored /admin
+# 0.21.1 - restored /admin
+# 0.21.0 - implemented `ipado3_back import`
+# 0.20.0 - removed support for couples
+# 0.19.1 - fixed issue with cached position of cursor after refresh
+# 0.19.0 - fixed issue with cursor missing after refresh, also fixed issue with cursor saving in db
+# 0.18.0 - extended InitData
+# 0.17.0 - ipado2 introduced
+# 0.16.0 - import from Лист2
+# 0.15.3 - restored previous data structure
+# 0.15.2 - moved enum Kind from server::ws:common/mod.rs to server::ws/mod.rs
+# 0.15.1 - restored admin UI
+# 0.15.0 - Refresh implemented as part of NeedInitData
+# 0.14.0 - restored nice ui
+# 0.13.0 - adopted to short schedule, z9v.ru/login
+# 0.12.0 - adopted to op_mode 0.2.0
+# 0.11.1 - ipado_back: added builtin logins
+# 0.11.0 - ipado_back: returned route /ws
+# 0.10.0 - adjusted to use op_mode
+# 0.9.0 - prepare to dance-list.ru
+# 0.8.0 - cache POOL_PG a time
+# 0.7.0 - Google / Yandex Auth 
+# 0.6.0 - init from via proxy
+# 0.5.0 - CheckAlive impelemented
+# 0.4.0 - MasterSlave Mode for cursor via WebSocket is implemented
+# 0.2.0 - WebSocket experiment
+# 0.1.0 - first implementation
+edition = "2021"
+
+# https://docs.rs/built/0.5.1/built/index.html
+build = "build.rs"
+
+[build-dependencies]
+built = "0.6"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+log = "0.4"
+anyhow = "1"
+tokio = { version = "1", features = ["full"] }
+dotenv = "0.15"
+pretty_env_logger = "0.5"
+structopt = { version = "0.3" }
+futures = { version = "0.3" }
+lazy_static = "1"
+regex = "1"
+strum = { version = "0.25", features = ["derive"] }
+itertools = "0.11"
+paste = "1"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+serde_yaml = "0.9"
+chrono = "0.4"
+common_macros2 = { path = "../common_macros2" }
+arrange_millis = { path = "../arrange_millis" }
+config = "0.13"
+warp = "0.3"
+hyper = "0.14"
+thiserror = "1"
+rand="0.8"
+bytes="1"
+ipado3_common = { path = "../ipado3_common", features=["compact_extended_value"] }
+tokio-stream = "0.1"
+bincode = "1"
+spreadsheets = { path = "../spreadsheets" }
+yup-oauth2 = "6"
+op_mode = { path = "../op_mode" }
+semver = "1"
+login_export = { path = "../login_export" }
+flate2 = "1"
+fast-math = "0.1"
+encoding_rs = "0.8"
+
+[dev-dependencies]
+matches = "0.1"
+

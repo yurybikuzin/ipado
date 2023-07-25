@@ -1,0 +1,42 @@
+
+ping_interval_secs = 15
+cache_for_local="cache.json"
+
+
+# host = "https://z9v.ru"
+
+# auth_spreadsheet_id = "12r4iNFiAW77OEypKZdjNrhPR4VbKT_Ngl6EtQrNVO0E"
+# auth_range = "Лист1!A2:A"
+
+[spreadsheet]
+id="1UmIbwqpwhOjicI1vYVJBGAggCrQ_xsN3h5bDvotyA6w"
+# title_range="Лист1!A3:A3"
+# data_range="Лист1!A4:C"
+# title_range="Лист1!E2:E2"
+
+name_range="Лист1!E2:E2"
+schedule_range="Лист1!D5:O"
+
+# name_range="Лист12!E2:E2"
+# schedule_range="Лист12!D5:M"
+
+# name_range="Лист1!E2:E2"
+# schedule_range="Лист1!D5:M"
+
+# schedule_range="Лист1!D5:M"
+# couples_range="Лист2!A3:G"
+# couples_range="Лист2!A3:H"
+service_account_secret_file = "sales@yury.bikuzin.42.json"
+
+[login]
+token_url = "https://z9v.ru/login/token"
+secret_key = "top_secret"
+
+[db]
+url="postgres://ipado2:1014103ipado2@v9z.ru:54495/ipado2"
+# url="postgres://ipado2:1014103ipado2@localhost/ipado2"
+
+# url="postgres://ipado:1014103@localhost/ipado"
+local_url="postgres://ipado:1014103@localhost/ipado"
+connection_max_count=1
+

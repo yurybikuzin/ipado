@@ -1,0 +1,321 @@
+
+
+body { 
+    --body-color: white;
+    --border: 1px solid var(--body-color);
+
+    --system-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+    --body-font-size: 18px;
+    --body-font: normal var(--body-font-size) var(--system-font-family);
+
+    --content-margin-hor: calc((100vw - 1024px) / 10);
+
+    --h1-margin-top: 0px;
+
+    /* --background-image-url: url(/dev/assets/mosty-2022/back.jpg); */
+    /* --background-image-url: url(/dev/assets/summer-2022/back.jpg); */
+    /* --background-image-url: url(/dev/assets/turkish-dance-festival-2022/back.jpg); */
+
+    /* --h1-ear-left-background-image-url: url(/dev/assets/ipado/logo.optimized.svg); */
+    /* --h1-ear-left-background-image-url: url(/dev/assets/summer-2022/logo_left.png); */
+    /* --h1-ear-left-background-image-width: 1000px; */
+    /* --h1-ear-left-background-image-width-px: 1000; */
+    /* --h1-ear-left-background-image-height-px: 250; */
+    /* --h1-ear-left-background-image-basis-denominator: 4; */
+
+    /* --h1-ear-left-background-image-url: url(/dev/assets/summer-2022/logo_left.optimized.png); */
+    /* --h1-ear-left-background-image-width: 200px; */
+    /* --h1-ear-left-background-image-width-px: 200; */
+    /* --h1-ear-left-background-image-height-px: 50; */
+    /* --h1-ear-left-background-image-basis-denominator: 1; */
+
+    /* --h1-title-background-image-url: url(/dev/assets/mosty-2022/logo.png); */
+    /* --h1-title-background-image-url: url(/dev/assets/summer-2022/logo_center.png); */
+    /* --h1-title-background-image-width: 819px; */
+    /* --h1-title-background-image-width-px: 819; */
+    /* --h1-title-background-image-height-px: 227; */
+    /* --h1-title-background-image-basis-denominator: 3; */
+    /* --h1-title-background-image-url: url(/dev/assets/summer-2022/logo_center.optimized.png); */
+    /* --h1-title-background-image-width: 246px; */
+    /* --h1-title-background-image-width-px: 246; */
+    /* --h1-title-background-image-height-px: 68; */
+    /* --h1-title-background-image-basis-denominator: 1; */
+
+    /* --h1-ear-right-background-image-url: url(/dev/assets/hotels/ParkInnRadisson.logo.png); */
+    /* --h1-ear-right-background-image-url: url(/dev/assets/summer-2022/logo_right.png); */
+    /* --h1-ear-right-background-image-width: 1200px; */
+    /* --h1-ear-right-background-image-width-px: 1200; */
+    /* --h1-ear-right-background-image-height-px: 1200; */
+    /* --h1-ear-right-background-image-basis-denominator: 9; */
+    /* --h1-ear-right-background-image-url: url(/dev/assets/summer-2022/logo_right.optimized.png); */
+    /* --h1-ear-right-background-image-width: 120px; */
+    /* --h1-ear-right-background-image-width-px: 120; */
+    /* --h1-ear-right-background-image-height-px: 120; */
+    /* --h1-ear-right-background-image-basis-denominator: 1; */
+
+    /* --h2-margin-top: 0px; */
+    --h2-height: calc(var(--cell-padding-ver) * 2 + 24px);
+
+    --user-panel-height: 0px;
+    --content-margin-top: 50px;
+    /* --content-margin-bottom: var(--content-margin-top); */
+
+    --col-header-padding-hor: 3px;
+    --cell-padding-ver: 3px;
+
+    --scroll-margin-top: calc(var(--content-margin-top) + 36px + 40px);
+
+    --selection-color-alive: darkorange;
+    --selection-color-dead: silver;
+
+    --номер_пункта_программы-caption: '№';
+    --категория-caption: 'категория';
+    --тур-caption: 'тур';
+    --программа-caption: 'программа';
+    --количество_пар-caption: 'пар';
+    --танец-caption: 'танцы';
+    --заходы-caption: 'заходы';
+    --начало-caption: 'начало';
+    --время-caption: 'время';
+    --окончание-caption: 'окончание';
+
+    --номер_пункта_программы-width: 32px;
+    --категория-width: calc(1024px 
+        - var(--номер_пункта_программы-width)
+        - var(--тур-width)
+        - var(--программа-width)
+        - var(--танец-width)
+        - var(--количество_пар-width)
+        - var(--заходы-width)
+        - var(--начало-width)
+        - var(--время-width)
+        - var(--окончание-width)
+    );
+
+    --тур-width: 78px;
+    --программа-width: 100px;
+    --танец-width: 126px;
+    --количество_пар-width: 32px;
+    --заходы-width: 32px;
+    --начало-width: 64px;
+    --время-width: 64px;
+    --окончание-width: 64px;
+
+    font: var(--body-font);
+    color: var(--body-color);
+    box-sizing: border-box;
+}
+
+/* ======================================= */
+
+/* .title:after { */
+/*     content: var(--h1-title-lambda2); */
+/* } */
+/* .loading { */
+/*     background-color: #DDD; */
+/*     color: black; */
+/*     height: 100vh; */
+/*     width: 100vw; */
+/*     display: flex; */
+/*     flex-direction: column; */
+/*     justify-content: center; */
+/*     align-items: center; */
+/* } */
+
+/* .guest_content { */
+/*     margin-top: var(--content-margin-top); */
+/*     margin-bottom: calc(100vh / 2); */
+/* } */
+
+body { 
+    margin: 0; 
+}
+
+/* ===================== */
+
+
+/* .background { */
+/*     height: 100vh; */
+/*     z-index: -1; */
+/* } */
+
+/* .background, header { */
+/*     top: 0; */
+/*     width: 100%; */
+/*     position: fixed; */
+/*     background-image: var(--background-image-url); */
+/*     background-size: calc(max(100vw, 100vh)); */
+/*     background-position: top 0 left 50%; */
+/* } */
+
+/* h1 {  */
+/*     display: flex; */
+/*     font: var(--h1-font); */
+/*     justify-content: center; */
+/*     margin: var(--h1-margin-top); */
+/*     text-align: center;  */
+/* } */
+
+
+h1, h2 {
+    margin-block-end: 0;
+}
+
+h1 { 
+    /* margin-top: 12px; */
+    margin-top: 0;
+}
+
+/* h2 { */
+/*     margin-top: 16px; */
+/* } */
+/*  */
+/* h1 { */
+/*     font: inherit; */
+/*     display: flex; */
+/*     justify-content: space-between; */
+/*     align-items: center; */
+/* } */
+
+/* h1 > *:not(:first-child) { */
+/*     margin-left: calc(100vw / 5); */
+/* } */
+/*  */
+/* h1 > *:first-child { */
+/*     margin-left: calc(100vw / 30); */
+/* } */
+/*  */
+/* h1 > .title { */
+/*     margin: 0 calc(100vw / 15); */
+/* } */
+/*  */
+/* h1 > *:last-child { */
+/*     margin-right: 24px; */
+/* } */
+/*  */
+/* h1 .ear:first-of-type { */
+/*     --origin-width: var(--h1-ear-left-background-image-width); */
+/*     --origin-width-px: var(--h1-ear-left-background-image-width-px); */
+/*     --origin-height-px: var(--h1-ear-left-background-image-height-px); */
+/*     --origin-url: var(--h1-ear-left-background-image-url); */
+/*     flex-basis: calc(var(--origin-width) / var(--h1-ear-left-background-image-basis-denominator)); */
+/*     flex-grow: 0;  */
+/*     flex-shrink: 1; */
+/*     display: flex; */
+/*     align-items: center; */
+/*     box-sizing: border-box; */
+/* } */
+/* h1 .ear:first-of-type > * { */
+/*     position: relative; */
+/*     width: 100%; */
+/*     padding-bottom: calc(100% * (var(--origin-height-px) / var(--origin-width-px))); */
+/*     float: left; */
+/*     height: 0; */
+/*     box-sizing: border-box; */
+/* } */
+/* h1 .ear:first-of-type > * > * { */
+/*     background-image: var(--origin-url); */
+/*     background-size: contain; */
+    /* background-color: white; */
+    /* mask-image: var(--origin-url); */
+    /* -webkit-mask-image: var(--origin-url); */
+/*     width: 100%; */
+/*     height: 100%; */
+/*     position: absolute; */
+/*     left: 0; */
+/*     box-sizing: border-box; */
+/* } */
+
+/* https://stackoverflow.com/questions/8894506/can-i-scale-a-divs-height-proportionally-to-its-width-using-css */
+/* h1 .title { */
+/*     --origin-width: var(--h1-title-background-image-width); */
+/*     --origin-width-px: var(--h1-title-background-image-width-px); */
+/*     --origin-height-px: var(--h1-title-background-image-height-px); */
+/*     --origin-url: var(--h1-title-background-image-url); */
+/*     flex-basis: calc(var(--origin-width) / var(--h1-title-background-image-basis-denominator)); */
+/*     flex-grow: 0;  */
+/*     flex-shrink: 1; */
+/*     display: flex; */
+/*     align-items: center; */
+/*     box-sizing: border-box; */
+/* } */
+/* h1 .title > * { */
+/*     position: relative; */
+/*     width: 100%; */
+/*     padding-bottom: calc(100% * (var(--origin-height-px) / var(--origin-width-px))); */
+/*     float: left; */
+/*     height: 0; */
+/*     box-sizing: border-box; */
+/* } */
+/* h1 .title > * > * { */
+/*     background-image: var(--origin-url); */
+/*     background-size: contain; */
+    /* background-color: white; */
+    /* mask-image: var(--origin-url); */
+    /* -webkit-mask-image: var(--origin-url); */
+    /* width: 100%; */
+    /* height: 100%; */
+    /* position: absolute; */
+    /* left: 0; */
+    /* box-sizing: border-box; */
+    /* https://stackoverflow.com/questions/13367868/how-to-modify-the-fill-color-of-an-svg-image-when-being-served-as-background-ima */
+/* https://codepen.io/sosuke/pen/Pjoqqp */
+/* } */
+/*  */
+/* h1 .ear:last-of-type { */
+/*     --origin-width: var(--h1-ear-right-background-image-width); */
+/*     --origin-width-px: var(--h1-ear-right-background-image-width-px); */
+/*     --origin-height-px: var(--h1-ear-right-background-image-height-px); */
+/*     --origin-url: var(--h1-ear-right-background-image-url); */
+/*     flex-basis: calc(var(--origin-width) / var(--h1-ear-right-background-image-basis-denominator)); */
+/*     flex-grow: 0;  */
+/*     flex-shrink: 1; */
+/*     display: flex; */
+/*     align-items: center; */
+/*     box-sizing: border-box; */
+/* } */
+/* h1 .ear:last-of-type > * { */
+/*     position: relative; */
+/*     width: 100%; */
+/*     padding-bottom: calc(100% * (var(--origin-height-px) / var(--origin-width-px))); */
+/*     float: left; */
+/*     height: 0; */
+/*     box-sizing: border-box; */
+/* } */
+/* h1 .ear:last-of-type > * > * { */
+    /* background-color: white; */
+    /* mask-image: var(--origin-url); */
+    /* -webkit-mask-image: var(--origin-url); */
+/*     background-image: var(--origin-url); */
+/*     background-size: contain; */
+/*     width: 100%; */
+/*     height: 100%; */
+/*     position: absolute; */
+/*     left: 0; */
+/*     box-sizing: border-box; */
+/* } */
+
+h2 { 
+    margin-top: var(--h2-margin-top);
+    font: inherit;
+}
+h2, .пункт_программы .row {
+    display: flex; 
+    justify-content: center;
+}
+
+h2 > *:after {
+    padding-left: var(--col-header-padding-hor);
+    padding-right: var(--col-header-padding-hor);
+    display: block;
+    font-weight: bold;
+}
+
+h2 > *:after, .пункт_программы .row > div{
+    text-align: center;
+}
+
+.пункт_программы {
+    scroll-margin-top: var(--scroll-margin-top);
+}

@@ -1,0 +1,109 @@
+.background {
+    display: none;
+}
+body {
+    --header-height: 110px;
+    --user_panel-height: 44px;
+    color: black;
+
+    --categorilar-name-caption: 'Название';
+    --categorilar-name-width: 310px;
+
+    --categorilar-dance_program-caption: 'Программа';
+    --categorilar-dance_program-width: 100px;
+
+    --categorilar-dances-caption: 'Танцы';
+    --categorilar-dances-width: 110px;
+
+    --categorilar-dance_count-caption: 'Кол-во';
+    --categorilar-dance_count-width: 64px;
+
+    --categorilar-couple_count-caption: 'Пар';
+    --categorilar-couple_count-width: 64px;
+
+    --categorilar-tour-width: 174px;
+
+    --couplelar-number-caption: 'Пара';
+    --couplelar-number-width: 64px;
+
+    --couplelar-names-caption: 'Фамилия Имя';
+    --couplelar-names-width: 210px;
+
+    --couplelar-categori_count-caption: 'Категорий';
+    --couplelar-categori_count-width: 100px;
+
+}
+
+header {
+    /* height: var(--header-height); */
+    background-color: #ddd;
+}
+
+h1 {
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+h2 {
+    background-color: white;
+}
+
+.user_panel {
+    height: var(--user_panel-height);
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+    justify-content: flex-end;
+}
+
+.user_panel .refresh {
+    margin-left: 16px;
+    width: 24px;
+    height: 24px;
+    --origin-url: url(/css/assets/refresh.icon.svg);
+    background-color: black;
+    mask-image: var(--origin-url);
+    -webkit-mask-image: var(--origin-url);
+}
+
+.user_panel .user {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.user_panel .picture {
+    width: 46px;
+    height: 46px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    clip-path: circle(20px at center);
+    margin-right: 8px;
+}
+
+.user_panel .email {
+    margin-right: 8px;
+}
+
+.user_panel .logout {
+  width: 20px;
+  height: 20px;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCI+PHBhdGggZD0iTTMgM2g4VjFIM2EyIDIgMCAwIDAtMiAydjE0YTIgMiAwIDAgMCAyIDJoOHYtMkgzeiIvPjxwYXRoIGQ9Im0xOSAxMC02LTV2NEg1djJoOHY0bDYtNXoiLz48L3N2Zz4K);
+  margin-right: 16px;
+  cursor: pointer;
+}
+
+table.schedule > tbody {
+    display: block;
+    height: calc(100vh - 120px);
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-bottom: 100px;
+    box-sizing: border-box;
+}
+
+/* table.schedule:last-of-type { */
+/* 	margin-bottom: 60px; */
+/* } */

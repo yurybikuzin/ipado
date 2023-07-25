@@ -1,0 +1,28 @@
+
+div.item {
+    padding: 8px 16px;
+}
+}
+ul.categorilar {
+    list-style-type: none;
+    font-size: 16px;
+    margin-block-start: 4px;
+    margin-block-end: 4px;
+}
+li.categori {
+    margin-bottom: 2px;
+}
+
+body { 
+    margin: 0;
+}
+
+header {
+    position: fixed;
+    width: 100vw;
+    top: 0;
+}
+.user_panel {
+    padding-right: 16px;
+}
+

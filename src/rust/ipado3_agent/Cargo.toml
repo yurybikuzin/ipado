@@ -1,0 +1,52 @@
+[package]
+name = "ipado3_agent"
+version = "0.22.4"
+# 0.22.4 - udeps.sh applied
+# 0.22.0 - added support for rename/remove events
+# 0.21.3 - поддержка .heats
+# 0.21.1 - maskt_agent became ipado3_agent
+# 0.5.1 - ignore incoming frames (text and binary)
+# 0.5.0 - WINDOWS_1251.decode movev from maskt_agent to maskt_back
+# 0.4.0 - added smart encode into Utf from win1251 if needed, adler32 checksum to assure changes
+# 0.3.0 - implemented support for ClientMessage::AgentInit
+# 0.2.0 - implemented support for ClientMessage::AgentFileChanged
+# 0.1.1 - websocket
+# 0.1.0 - notify
+authors = ["Yury Bikuzin <yury.bikuzin@gmail.com>"]
+edition = "2021"
+
+# https://docs.rs/built/0.5.1/built/index.html
+build = "build.rs"
+
+[build-dependencies]
+built = "0.6"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+log = "0.4"
+anyhow = "1.0"
+common_macros2 = { path = "../common_macros2" }
+arrange_millis = { path = "../arrange_millis" }
+tokio = { version = "1", features = ["full"] }
+dotenv = "0.15.0"
+pretty_env_logger = "0.5"
+structopt = { version = "0.3" }
+op_mode = { path = "../op_mode" }
+notify = "4"
+websockets = "0.3"
+futures = { version = "0.3" }
+lazy_static = "1.4"
+regex = "1"
+paste = "1.0"
+serde = { version = "1", features = ["derive"] }
+# serde_json = "1.0"
+ipado3_common = { path = "../ipado3_common" }
+semver = "1"
+bincode = "1"
+flate2 = "1"
+adler = "1"
+strum = { version = "0.25", features = ["derive"] }
+# config = "0.13"
+chrono-tz = "0.8"
+chrono = "0.4"

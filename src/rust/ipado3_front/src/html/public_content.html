@@ -1,0 +1,23 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=auto"/>
+	<link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+
+    <link rel="stylesheet" href="css/old.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style-landscape.css" />
+    <link rel="stylesheet" href="css/style-portrait.css" />
+    <link rel="stylesheet" href="css/assets/2023-07-08/style.css" />
+    <title>IPADO</title>
+    <script type="module">
+        const APP = 'ipado3'
+        import('./js/loader.js')
+            .then(m => 
+                m.load_app({APP})
+            )
+    </script>
+
+</head>
+<body id="app" style="margin: 0"></body>
+</html>

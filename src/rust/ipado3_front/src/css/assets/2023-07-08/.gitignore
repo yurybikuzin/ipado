@@ -1,0 +1,4 @@
+*.png
+*.jpg
+!*.optimized.png
+!*.optimized.jpg
