@@ -1,4 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:lucid="lucid" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="16 270 1210 1040">
+    <rect x="16" y="270" width="1210" height="1040" fill="white"/>
   <g lucid:page-tab-id="~ChftzRAVLEv" transform="translate(-260.23550360572165 21)">
     <path fill="#9391ff" d="M746 683a8 8 0 0 1 8-8h252a8 8 0 0 1 8 8v174a8 8 0 0 1-8 8H754a8 8 0 0 1-8-8z"/>
     <use xlink:href="#a" transform="matrix(1,0,0,1,750.4013183922672,679.6375950241915) translate(28.8086419753087 99.51944444444445)"/>
